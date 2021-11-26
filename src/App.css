@@ -1,7 +1,7 @@
 .App {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #1a202c;
-  overflow: scroll;
+
   text-align: center;
 }
 
@@ -69,7 +69,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -111,7 +111,7 @@
   object-fit: cover;
 }
 
-.connected-container input[type='text'] {
+.connected-container input[type="text"] {
   display: inline-block;
   color: white;
   padding: 10px;
