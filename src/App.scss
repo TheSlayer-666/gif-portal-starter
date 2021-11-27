@@ -1,8 +1,5 @@
 .App {
-  min-height: 100vh;
-  background-color: #1a202c;
-
-  text-align: center;
+  @apply text-center min-h-screen min-w-full mx-auto;
 }
 
 .container {
@@ -51,15 +48,18 @@
   font-weight: bold;
   color: white;
 }
-
+.tip-button {
+  @apply bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 rounded-md text-white m-4 mx-auto;
+}
 .connect-wallet-button {
-  background: -webkit-linear-gradient(left, #60c657, #35aee2);
+  @apply bg-gradient-to-r from-green-500 to-blue-700;
+
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }
 
 .submit-gif-button {
-  background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
+  @apply bg-gradient-to-r from-blue-700  to-gray-900;
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
   margin-left: 10px;
@@ -76,11 +76,6 @@
   padding-bottom: 45px;
 }
 
-.twitter-logo {
-  width: 35px;
-  height: 35px;
-}
-
 .footer-text {
   color: white;
   font-size: 16px;
@@ -88,12 +83,7 @@
 }
 
 .gif-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 1.5rem;
-  justify-items: center;
-  margin: 0;
-  padding: 0;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center  gap-4;
 }
 
 .gif-grid .gif-item {
@@ -111,7 +101,7 @@
   object-fit: cover;
 }
 
-.connected-container input[type="text"] {
+.connected-container .link-input {
   display: inline-block;
   color: white;
   padding: 10px;
@@ -123,8 +113,4 @@
   border: none;
   border-radius: 10px;
   margin: 50px auto;
-}
-
-.connected-container button {
-  height: 50px;
 }
